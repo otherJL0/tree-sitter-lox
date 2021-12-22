@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-lox",
+  "version": "1.0.0",
+  "description": "tree-sitter grammar for the toy language lox",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otherJL0/tree-sitter-lox.git"
+  },
+  "keywords": [
+    "tree-sitter",
+    "lox",
+    "grammar"
+  ],
+  "author": "Jonathan Lopez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otherJL0/tree-sitter-lox/issues"
+  },
+  "homepage": "https://github.com/otherJL0/tree-sitter-lox#readme",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.1"
+  }
+}

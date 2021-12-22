@@ -64,6 +64,12 @@ module.exports = grammar({
         "=",
         $._expression,
       ),
+    for_statement: ($) =>
+      seq(
+        "for",
+        $._parenethesized_expression,
+        field("body", $.body),
+      ),
 
     while_statement: ($) =>
       seq(

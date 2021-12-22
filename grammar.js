@@ -8,7 +8,13 @@ module.exports = grammar({
 
   word: ($) => $.identifier,
   rules: {
-    source_file: ($) => repeat($._statement),
+    source_file: ($) =>
+      repeat(
+        choice(
+          $._statement,
+          $.body,
+        ),
+      ),
     comment: (_$) => /\/\/.*/,
 
     _statement: ($) =>
@@ -20,6 +26,8 @@ module.exports = grammar({
         ),
         ";",
       ),
+
+    body: ($) => seq("{", repeat($._statement), "}"),
     print_statement: ($) => seq("print", $._expression),
 
     _assignment_statement: ($) =>
